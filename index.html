@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -30,7 +30,7 @@ body{
     align-items:center;
     padding:20px;
     overflow:hidden;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 .bg-canvas{
@@ -52,9 +52,7 @@ body{
         transform:translateY(100vh) scale(0);
         opacity:0;
     }
-    10%{
-        opacity:1;
-    }
+    10%{opacity:1;}
     100%{
         transform:translateY(-10vh) scale(1.2);
         opacity:0;
@@ -99,9 +97,7 @@ body{
 }
 
 @keyframes spin{
-    to{
-        transform:rotate(360deg);
-    }
+    to{transform:rotate(360deg);}
 }
 
 .logo{
@@ -158,8 +154,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:16px;
-    padding:20px 28px;
+    padding:20px;
     border-radius:18px;
     text-decoration:none;
     overflow:hidden;
@@ -183,27 +178,23 @@ body{
 }
 
 .btn-icon{
-    position:relative;
+    position:absolute;
+    left:22px;
     z-index:1;
-    width:24px;
-    height:24px;
     display:flex;
     align-items:center;
     justify-content:center;
-    flex-shrink:0;
 }
 
 .btn-icon img{
-    width:24px;
-    height:24px;
+    width:22px;
+    height:22px;
     object-fit:contain;
-    display:block;
 }
 
 .btn-text{
     position:relative;
     z-index:1;
-    line-height:1;
 }
 
 .btn:not(.btn-outline){
@@ -212,11 +203,6 @@ body{
 
 .btn-outline{
     color:var(--gold-light);
-}
-
-.btn:hover{
-    transform:translateY(-3px) scale(1.02);
-    box-shadow:0 10px 30px rgba(212,175,55,0.25);
 }
 
 .footer{
@@ -228,32 +214,6 @@ body{
     font-size:13px;
     font-style:italic;
 }
-
-@media(max-width:480px){
-    .card{
-        padding:40px 18px;
-    }
-
-    .salon-name{
-        font-size:24px;
-    }
-
-    .btn{
-        padding:18px 20px;
-        font-size:13px;
-        letter-spacing:2px;
-    }
-
-    .btn-icon{
-        width:22px;
-        height:22px;
-    }
-
-    .btn-icon img{
-        width:22px;
-        height:22px;
-    }
-}
 </style>
 </head>
 <body>
@@ -264,12 +224,12 @@ body{
     <div class="logo-wrap">
         <div class="logo-ring-outer"></div>
         <div class="logo-ring"></div>
-        <img src="logo.jpeg" alt="INARI" class="logo">
+        <img src="logo.jpeg" class="logo">
     </div>
 
     <h1 class="salon-name">
         INARI BEAUTY
-        <span>Vizag</span>
+        <span>Luxury Salon · Vizag</span>
     </h1>
 
     <div class="divider">
@@ -279,27 +239,21 @@ body{
     </div>
 
     <div class="btn-group">
-        <a href="https://www.instagram.com/inaribeautysalonvizag/" class="btn" target="_blank">
+        <a href="#" class="btn">
             <div class="btn-bg"></div>
-            <span class="btn-icon">
-                <img src="instagram.png" alt="Instagram">
-            </span>
+            <span class="btn-icon"><img src="instagram.png"></span>
             <span class="btn-text">Instagram</span>
         </a>
 
-        <a href="https://www.google.com/search?q=INARI+Beauty+Salon+Reviews" class="btn btn-outline" target="_blank">
+        <a href="#" class="btn btn-outline">
             <div class="btn-bg"></div>
-            <span class="btn-icon">
-                <img src="google.png" alt="Google">
-            </span>
+            <span class="btn-icon"><img src="google.png"></span>
             <span class="btn-text">Leave A Review</span>
         </a>
 
-        <a href="https://www.youtube.com/@inaribeautysalon" class="btn" target="_blank">
+        <a href="#" class="btn">
             <div class="btn-bg"></div>
-            <span class="btn-icon">
-                <img src="youtube.png" alt="YouTube">
-            </span>
+            <span class="btn-icon"><img src="youtube.png"></span>
             <span class="btn-text">YouTube</span>
         </a>
     </div>
