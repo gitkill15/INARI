@@ -157,8 +157,8 @@ body{
     position:relative;
     display:flex;
     align-items:center;
-    justify-content:flex-start;
-    gap:16px;
+    justify-content:center;
+    gap:14px;
     padding:18px 22px;
     border-radius:16px;
     text-decoration:none;
@@ -182,24 +182,31 @@ body{
     border:1.5px solid rgba(212,175,55,0.4);
 }
 
-.btn-text,
 .btn-icon{
     position:relative;
     z-index:1;
-}
-
-.btn-icon{
-    background:transparent;
     display:flex;
     align-items:center;
     justify-content:center;
+    width:20px;
+    height:20px;
+    flex-shrink:0;
+    background:transparent;
 }
 
 .btn-icon img{
-    width:28px;
-    height:28px;
+    width:20px;
+    height:20px;
     object-fit:contain;
     display:block;
+}
+
+.btn-text{
+    position:relative;
+    z-index:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .btn:not(.btn-outline){
@@ -276,7 +283,7 @@ body{
             <span class="btn-icon">
                 <img src="google.png" alt="Google">
             </span>
-            <span class="btn-text">Leave Review</span>
+            <span class="btn-text">Leave A Review</span>
         </a>
 
         <a href="https://www.youtube.com/@inaribeautysalon" class="btn" target="_blank">
