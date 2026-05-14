@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -158,16 +158,16 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:14px;
-    padding:18px 22px;
-    border-radius:16px;
+    gap:16px;
+    padding:20px 28px;
+    border-radius:18px;
     text-decoration:none;
     overflow:hidden;
-    font-size:13px;
-    font-weight:bold;
-    letter-spacing:2px;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
     text-transform:uppercase;
-    transition:0.3s;
+    transition:0.3s ease;
 }
 
 .btn-bg{
@@ -185,18 +185,17 @@ body{
 .btn-icon{
     position:relative;
     z-index:1;
+    width:24px;
+    height:24px;
     display:flex;
     align-items:center;
     justify-content:center;
-    width:20px;
-    height:20px;
     flex-shrink:0;
-    background:transparent;
 }
 
 .btn-icon img{
-    width:20px;
-    height:20px;
+    width:24px;
+    height:24px;
     object-fit:contain;
     display:block;
 }
@@ -204,9 +203,7 @@ body{
 .btn-text{
     position:relative;
     z-index:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    line-height:1;
 }
 
 .btn:not(.btn-outline){
@@ -242,7 +239,19 @@ body{
     }
 
     .btn{
-        padding:16px 18px;
+        padding:18px 20px;
+        font-size:13px;
+        letter-spacing:2px;
+    }
+
+    .btn-icon{
+        width:22px;
+        height:22px;
+    }
+
+    .btn-icon img{
+        width:22px;
+        height:22px;
     }
 }
 </style>
@@ -260,7 +269,7 @@ body{
 
     <h1 class="salon-name">
         INARI BEAUTY
-        <span>Luxury Salon · Vizag</span>
+        <span>Vizag</span>
     </h1>
 
     <div class="divider">
