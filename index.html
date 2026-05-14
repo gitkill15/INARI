@@ -8,12 +8,12 @@
     <style>
         @font-face {
             font-family: 'Montserrat';
-            src: url('./Montserrat-Bold.ttf') format('truetype');
+            src: url('Montserrat-Bold.ttf') format('truetype');
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('./Poppins-Regular.ttf') format('truetype');
+            src: url('Poppins-Regular.ttf') format('truetype');
         }
 
         :root {
@@ -65,11 +65,9 @@
                 transform: translateY(100vh) scale(0);
                 opacity: 0;
             }
-
             10% {
                 opacity: 1;
             }
-
             100% {
                 transform: translateY(-10vh) scale(1.2);
                 opacity: 0;
@@ -98,7 +96,6 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -159,19 +156,6 @@
             border-radius: 50%;
             object-fit: cover;
             display: block;
-        }
-
-        .logo-fallback {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1a1710, #0d0c09);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 34px;
-            color: var(--gold);
         }
 
         .salon-name {
@@ -282,17 +266,6 @@
             letter-spacing: 2px;
             font-style: italic;
         }
-
-        @media(max-width:480px) {
-            .card {
-                border-radius: 24px;
-                padding: 45px 20px;
-            }
-
-            .salon-name {
-                font-size: 24px;
-            }
-        }
     </style>
 </head>
 
@@ -304,20 +277,7 @@
     <div class="logo-wrap">
         <div class="logo-ring-outer"></div>
         <div class="logo-ring"></div>
-
-        <img
-            src="logo.jpeg"
-            alt="INARI Beauty Salon"
-            class="logo"
-            onerror="
-                this.style.display='none';
-                document.getElementById('logoFallback').style.display='flex';
-            "
-        >
-
-        <div class="logo-fallback" id="logoFallback" style="display:none;">
-            IB
-        </div>
+        <img src="logo.jpeg" alt="INARI Beauty Salon" class="logo">
     </div>
 
     <h1 class="salon-name">
@@ -334,25 +294,19 @@
     <div class="btn-group">
         <a href="https://www.instagram.com/inaribeautysalonvizag/" class="btn" target="_blank">
             <div class="btn-bg"></div>
-            <span class="btn-icon">
-                <img src="instagram.png" alt="Instagram">
-            </span>
+            <span class="btn-icon"><img src="instagram.png"></span>
             <span class="btn-text">Instagram</span>
         </a>
 
         <a href="https://www.google.com/search?q=INARI+Beauty+Salon+Reviews" class="btn btn-outline" target="_blank">
             <div class="btn-bg"></div>
-            <span class="btn-icon">
-                <img src="google.png" alt="Google">
-            </span>
+            <span class="btn-icon"><img src="google.png"></span>
             <span class="btn-text">Leave a Review</span>
         </a>
 
         <a href="https://www.youtube.com/@inaribeautysalon" class="btn" target="_blank">
             <div class="btn-bg"></div>
-            <span class="btn-icon">
-                <img src="youtube.png" alt="YouTube">
-            </span>
+            <span class="btn-icon"><img src="youtube.png"></span>
             <span class="btn-text">YouTube</span>
         </a>
     </div>
