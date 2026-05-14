@@ -37,6 +37,7 @@ body{
     position:fixed;
     inset:0;
     z-index:0;
+    pointer-events:none;
 }
 
 .particle{
@@ -51,7 +52,9 @@ body{
         transform:translateY(100vh) scale(0);
         opacity:0;
     }
-    10%{opacity:1;}
+    10%{
+        opacity:1;
+    }
     100%{
         transform:translateY(-10vh) scale(1.2);
         opacity:0;
@@ -96,7 +99,9 @@ body{
 }
 
 @keyframes spin{
-    to{transform:rotate(360deg);}
+    to{
+        transform:rotate(360deg);
+    }
 }
 
 .logo{
@@ -111,6 +116,7 @@ body{
     font-weight:bold;
     letter-spacing:4px;
     color:var(--gold-light);
+    text-transform:uppercase;
 }
 
 .salon-name span{
@@ -151,9 +157,9 @@ body{
     position:relative;
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:14px;
-    padding:18px;
+    justify-content:flex-start;
+    gap:16px;
+    padding:18px 22px;
     border-radius:16px;
     text-decoration:none;
     overflow:hidden;
@@ -176,14 +182,24 @@ body{
     border:1.5px solid rgba(212,175,55,0.4);
 }
 
-.btn-text,.btn-icon{
+.btn-text,
+.btn-icon{
     position:relative;
     z-index:1;
 }
 
+.btn-icon{
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
 .btn-icon img{
-    width:22px;
-    height:22px;
+    width:28px;
+    height:28px;
+    object-fit:contain;
+    display:block;
 }
 
 .btn:not(.btn-outline){
@@ -194,6 +210,11 @@ body{
     color:var(--gold-light);
 }
 
+.btn:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 10px 30px rgba(212,175,55,0.25);
+}
+
 .footer{
     margin-top:30px;
 }
@@ -201,8 +222,22 @@ body{
 .footer-text{
     color:var(--text-dim);
     font-size:13px;
+    font-style:italic;
 }
 
+@media(max-width:480px){
+    .card{
+        padding:40px 18px;
+    }
+
+    .salon-name{
+        font-size:24px;
+    }
+
+    .btn{
+        padding:16px 18px;
+    }
+}
 </style>
 </head>
 <body>
@@ -213,7 +248,7 @@ body{
     <div class="logo-wrap">
         <div class="logo-ring-outer"></div>
         <div class="logo-ring"></div>
-        <img src="logo.jpeg" class="logo">
+        <img src="logo.jpeg" alt="INARI" class="logo">
     </div>
 
     <h1 class="salon-name">
@@ -228,23 +263,33 @@ body{
     </div>
 
     <div class="btn-group">
-        <a href="https://www.instagram.com/inaribeautysalonvizag/" class="btn">
+        <a href="https://www.instagram.com/inaribeautysalonvizag/" class="btn" target="_blank">
             <div class="btn-bg"></div>
-            <span class="btn-icon"><img src="instagram.png"></span>
+            <span class="btn-icon">
+                <img src="instagram.png" alt="Instagram">
+            </span>
             <span class="btn-text">Instagram</span>
         </a>
 
-        <a href="https://www.google.com/search?q=INARI+Beauty+Salon+Reviews" class="btn btn-outline">
+        <a href="https://www.google.com/search?q=INARI+Beauty+Salon+Reviews" class="btn btn-outline" target="_blank">
             <div class="btn-bg"></div>
-            <span class="btn-icon"><img src="google.png"></span>
+            <span class="btn-icon">
+                <img src="google.png" alt="Google">
+            </span>
             <span class="btn-text">Leave Review</span>
         </a>
 
-        <a href="https://www.youtube.com/@inaribeautysalon" class="btn">
+        <a href="https://www.youtube.com/@inaribeautysalon" class="btn" target="_blank">
             <div class="btn-bg"></div>
-            <span class="btn-icon"><img src="youtube.png"></span>
+            <span class="btn-icon">
+                <img src="youtube.png" alt="YouTube">
+            </span>
             <span class="btn-text">YouTube</span>
         </a>
+    </div>
+
+    <div class="footer">
+        <p class="footer-text">Thank you for visiting ✦</p>
     </div>
 </div>
 
