@@ -34,8 +34,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Background Glow Particles */
-
         .bg-canvas{
             position:fixed;
             inset:0;
@@ -54,63 +52,32 @@
         }
 
         @keyframes floatUp{
-            0%{
-                transform:translateY(100vh) scale(0);
-                opacity:0;
-            }
-
-            10%{
-                opacity:1;
-            }
-
-            100%{
-                transform:translateY(-10vh) scale(1.2);
-                opacity:0;
-            }
+            0%{ transform:translateY(100vh) scale(0); opacity:0; }
+            10%{ opacity:1; }
+            100%{ transform:translateY(-10vh) scale(1.2); opacity:0; }
         }
-
-        /* Card */
 
         .card{
             position:relative;
             z-index:2;
             width:100%;
             max-width:420px;
-
-            background:linear-gradient(
-                160deg,
-                var(--surface2),
-                var(--surface)
-            );
-
+            background:linear-gradient(160deg, var(--surface2), var(--surface));
             border:1px solid rgba(212,175,55,0.2);
             border-radius:30px;
-
             padding:50px 24px;
-
             text-align:center;
-
             box-shadow:
                 0 0 0 1px rgba(212,175,55,0.05),
                 0 25px 80px rgba(0,0,0,0.85),
                 0 0 60px rgba(212,175,55,0.05) inset;
-
             animation:cardReveal 0.8s ease;
         }
 
         @keyframes cardReveal{
-            from{
-                opacity:0;
-                transform:translateY(30px);
-            }
-
-            to{
-                opacity:1;
-                transform:translateY(0);
-            }
+            from{ opacity:0; transform:translateY(30px); }
+            to{ opacity:1; transform:translateY(0); }
         }
-
-        /* Decorative Gold Lines */
 
         .card::before,
         .card::after{
@@ -119,24 +86,11 @@
             left:50%;
             transform:translateX(-50%);
             height:1px;
-
-            background:linear-gradient(
-                90deg,
-                transparent,
-                var(--gold),
-                transparent
-            );
+            background:linear-gradient(90deg, transparent, var(--gold), transparent);
         }
 
-        .card::before{
-            top:0;
-            width:60%;
-        }
-
-        .card::after{
-            bottom:0;
-            width:40%;
-        }
+        .card::before{ top:0; width:60%; }
+        .card::after{ bottom:0; width:40%; }
 
         /* Logo */
 
@@ -162,11 +116,7 @@
             animation:spin 14s linear infinite reverse;
         }
 
-        @keyframes spin{
-            to{
-                transform:rotate(360deg);
-            }
-        }
+        @keyframes spin{ to{ transform:rotate(360deg); } }
 
         .logo{
             width:120px;
@@ -174,28 +124,19 @@
             border-radius:50%;
             object-fit:cover;
             display:block;
-            mix-blend-mode:luminosity;
         }
 
         .logo-fallback{
             width:120px;
             height:120px;
             border-radius:50%;
-
-            background:linear-gradient(
-                135deg,
-                #1a1710,
-                #0d0c09
-            );
-
+            background:linear-gradient(135deg, #1a1710, #0d0c09);
             display:flex;
             align-items:center;
             justify-content:center;
-
             font-family: Arial, sans-serif;
             font-size:34px;
             font-weight:700;
-
             color:var(--gold);
         }
 
@@ -214,11 +155,9 @@
         .salon-name span{
             display:block;
             margin-top:8px;
-
             font-size:12px;
             font-weight:300;
             letter-spacing:3px;
-
             color:var(--text-dim);
         }
 
@@ -254,39 +193,26 @@
 
         .btn{
             position:relative;
-
             display:flex;
             align-items:center;
             justify-content:center;
             gap:14px;
-
             padding:18px;
-
             border-radius:16px;
             text-decoration:none;
-
             overflow:hidden;
-
             font-family: Arial, sans-serif;
             font-size:13px;
             font-weight:700;
             letter-spacing:2px;
             text-transform:uppercase;
-
             transition:0.3s ease;
         }
 
         .btn-bg{
             position:absolute;
             inset:0;
-
-            background:linear-gradient(
-                135deg,
-                #c9a227,
-                #f0d060,
-                #c9a227
-            );
-
+            background:linear-gradient(135deg, #c9a227, #f0d060, #c9a227);
             z-index:0;
         }
 
@@ -306,34 +232,19 @@
             height:22px;
             object-fit:contain;
             display:block;
-            mix-blend-mode:multiply;
         }
 
-        .btn-outline .btn-icon img{
-            mix-blend-mode:normal;
-            filter:brightness(0) invert(1) opacity(0.75);
-        }
-
-        .btn:not(.btn-outline){
-            color:black;
-        }
-
-        .btn-outline{
-            color:var(--gold-light);
-        }
+        .btn:not(.btn-outline){ color:black; }
+        .btn-outline{ color:var(--gold-light); }
 
         .btn:hover{
             transform:translateY(-3px) scale(1.02);
-
-            box-shadow:
-                0 10px 30px rgba(212,175,55,0.25);
+            box-shadow:0 10px 30px rgba(212,175,55,0.25);
         }
 
         /* Footer */
 
-        .footer{
-            margin-top:30px;
-        }
+        .footer{ margin-top:30px; }
 
         .footer-text{
             color:var(--text-dim);
@@ -342,19 +253,9 @@
             font-style:italic;
         }
 
-        /* Mobile */
-
         @media(max-width:480px){
-
-            .card{
-                border-radius:24px;
-                padding:45px 20px;
-            }
-
-            .salon-name{
-                font-size:24px;
-            }
-
+            .card{ border-radius:24px; padding:45px 20px; }
+            .salon-name{ font-size:24px; }
         }
 
     </style>
@@ -362,50 +263,26 @@
 
 <body>
 
-<!-- Background -->
-
 <div class="bg-canvas" id="bgCanvas"></div>
-
-<!-- Main Card -->
 
 <div class="card">
 
-    <!-- Logo -->
-
     <div class="logo-wrap">
-
         <div class="logo-ring-outer"></div>
         <div class="logo-ring"></div>
-
         <img
             src="logo.jpeg"
             alt="INARI Beauty Salon"
             class="logo"
-
-            onerror="
-                this.style.display='none';
-                document.getElementById('logoFallback').style.display='flex';
-            "
+            onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';"
         >
-
-        <div
-            class="logo-fallback"
-            id="logoFallback"
-            style="display:none;"
-        >
-            IB
-        </div>
-
+        <div class="logo-fallback" id="logoFallback" style="display:none;">IB</div>
     </div>
 
-    <!-- Heading -->
-
     <h1 class="salon-name">
-        INARI BEAUTY SALON 
-        <span>Vizag</span>
+        INARI BEAUTY
+        <span>Luxury Salon · Vizag</span>
     </h1>
-
-    <!-- Divider -->
 
     <div class="divider">
         <div class="divider-line"></div>
@@ -413,81 +290,40 @@
         <div class="divider-line"></div>
     </div>
 
-    <!-- Buttons -->
-
     <div class="btn-group">
 
-        <!-- Instagram -->
-
-        <a
-            href="https://www.instagram.com/inaribeautysalonvizag/"
-            class="btn"
-            target="_blank"
-        >
+        <a href="https://www.instagram.com/inaribeautysalonvizag/" class="btn" target="_blank">
             <div class="btn-bg"></div>
-
-            <span class="btn-icon">
-                <img src="instagram.png" alt="Instagram">
-            </span>
-
+            <span class="btn-icon"><img src="instagram.png" alt="Instagram"></span>
             <span class="btn-text">Instagram</span>
         </a>
 
-        <!-- Google -->
-
-        <a
-            href="https://www.google.com/search?q=INARI+Beauty+Salon+Reviews"
-            class="btn btn-outline"
-            target="_blank"
-        >
+        <a href="https://www.google.com/search?q=INARI+Beauty+Salon+Reviews" class="btn btn-outline" target="_blank">
             <div class="btn-bg"></div>
-
-            <span class="btn-icon">
-                <img src="google.png" alt="Google">
-            </span>
-
+            <span class="btn-icon"><img src="google.png" alt="Google"></span>
             <span class="btn-text">Leave a Review</span>
         </a>
 
-        <!-- YouTube -->
-
-        <a
-            href="https://www.youtube.com/@inaribeautysalon"
-            class="btn"
-            target="_blank"
-        >
+        <a href="https://www.youtube.com/@inaribeautysalon" class="btn" target="_blank">
             <div class="btn-bg"></div>
-
-            <span class="btn-icon">
-                <img src="youtube.png" alt="YouTube">
-            </span>
-
+            <span class="btn-icon"><img src="youtube.png" alt="YouTube"></span>
             <span class="btn-text">YouTube</span>
         </a>
 
     </div>
 
-    <!-- Footer -->
-
     <div class="footer">
-        <p class="footer-text">
-            Thank you for visiting ✦
-        </p>
+        <p class="footer-text">Thank you for visiting ✦</p>
     </div>
 
 </div>
 
 <script>
-
     const canvas = document.getElementById('bgCanvas');
-
     for(let i=0;i<16;i++){
-
         const p = document.createElement('div');
         p.classList.add('particle');
-
         const size = Math.random()*160 + 40;
-
         p.style.cssText = `
             width:${size}px;
             height:${size}px;
@@ -496,10 +332,8 @@
             animation-delay:${Math.random()*-20}s;
             opacity:${Math.random()*0.3+0.05};
         `;
-
         canvas.appendChild(p);
     }
-
 </script>
 
 </body>
